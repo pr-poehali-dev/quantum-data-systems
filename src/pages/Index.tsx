@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface BadgeProps {
   icon: React.ReactNode;
@@ -17,6 +18,8 @@ function Badge({ icon, text }: BadgeProps) {
 }
 
 export default function Index() {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full min-h-screen relative bg-[#F7F5F3] overflow-x-hidden flex flex-col justify-start items-center">
       <div className="relative flex flex-col justify-start items-center w-full">
@@ -80,11 +83,14 @@ export default function Index() {
 
               <div className="w-full max-w-[497px] lg:w-[497px] flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 relative z-10 mt-6 sm:mt-8 md:mt-10 lg:mt-12">
                 <div className="backdrop-blur-[8.25px] flex justify-start items-center gap-4">
-                  <div className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-[34px] bg-[#322D2B] shadow-[0px_1px_2px_rgba(55,50,47,0.36)] overflow-hidden rounded-full flex justify-center items-center gap-2">
+                  <button
+                    onClick={() => navigate("/search")}
+                    className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-[34px] bg-[#322D2B] shadow-[0px_1px_2px_rgba(55,50,47,0.36)] overflow-hidden rounded-full flex justify-center items-center gap-2 hover:bg-[#2A2520] transition-colors cursor-pointer"
+                  >
                     <div className="flex flex-col justify-center text-white text-sm sm:text-sm md:text-[15px] font-medium leading-5 md:leading-6 font-sans">
                       Начать розыск
                     </div>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
