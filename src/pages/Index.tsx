@@ -82,7 +82,7 @@ export default function Index() {
                 <div className="backdrop-blur-[8.25px] flex justify-start items-center gap-4">
                   <div className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-[34px] bg-[#322D2B] shadow-[0px_1px_2px_rgba(55,50,47,0.36)] overflow-hidden rounded-full flex justify-center items-center gap-2">
                     <div className="flex flex-col justify-center text-white text-sm sm:text-sm md:text-[15px] font-medium leading-5 md:leading-6 font-sans">
-                      Начать бесплатно
+                      Начать розыск
                     </div>
                   </div>
                 </div>
